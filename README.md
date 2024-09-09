@@ -19,3 +19,4 @@ Bonus
 
 /*SOLUZIONE*/
 - aggiungo e compilo il file script.js;
+- compilo il file server.php;

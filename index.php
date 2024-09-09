@@ -19,7 +19,7 @@
                 <div class="col-6">
                     <div class="d-flex">
                         <input type="text" name="todo-item" id="todo-item" placeholder="Aggiungi incarico" class="form-control" v-model="todo_item">
-                        <button class="btn" @click="addTodo">Aggiungi</button>
+                        <button class="btn btn-primary" @click="addTodo">Aggiungi</button>
                     </div>
                 </div>
             </div>

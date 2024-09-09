@@ -8,7 +8,23 @@
     <title>PHP ToDo List JSON</title>
 </head>
 <body>
-
+    <div id=app>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <ul>
+                        <li v-for="todo, index in todolist" :key="index">{{ todo }}</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <div class="d-flex">
+                        <input type="text" name="todo-item" id="todo-item" placeholder="Aggiungi incarico" class="form-control" v-model="todo_item">
+                        <button class="btn" @click="addTodo">Aggiungi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
 <script src="./js/script.js"></script>

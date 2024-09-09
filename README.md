@@ -16,3 +16,6 @@ Bonus
 3 - Permettere di segnare un task come completato facendo click sul testo
 4 - Permettere il toggle del task (completato/non completato)
 6 - Abilitare l’eliminazione di un task
+
+/*SOLUZIONE*/
+- aggiungo e compilo il file script.js;

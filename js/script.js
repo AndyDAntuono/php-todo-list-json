@@ -1,4 +1,4 @@
-const { createApp } = App;
+const { createApp } = Vue;
 
 createApp({
     data() {
@@ -16,11 +16,18 @@ createApp({
             });
         },
         addTodo(){
-            const data = {
-                todoItem: this.todo_iterm
-            }
+            const data = new FormData();
+            data.append('addTodo', this.todo_item);  // Cambiato il nome del campo
 
-            axios.post(this.url, data, {headers: {'content.type': 'multipart/form.data'}})
+            axios.post(this.url, data, {headers: {'Content-Type': 'multipart/form-data'}})
+                .then((resp) => {
+                    console.log('Todo added successfully');
+                    this.getTodoList();  // Aggiorna la lista dopo l'aggiunta
+                    this.todo_item = '';  // Resetta il campo di input
+                })
+                .catch((error) => {
+                    console.error('Error adding todo:', error);
+                });
         }
     },
     mounted(){

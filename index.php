@@ -15,7 +15,9 @@
             <div class="row">
                 <div class="col-6">
                     <ul>
-                        <li v-for="todo, index in todoList" :key="index">{{ todo.name }}</li>
+                    <li v-for="(todo, index) in todoList" :key="index">
+                        {{ todo && todo.name ? todo.name : 'Elemento non valido' }}
+                    </li>
                     </ul>
                 </div>
                 <div class="col-6">

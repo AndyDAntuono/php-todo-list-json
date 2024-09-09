@@ -1,3 +1,4 @@
+<!--index.php-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +15,7 @@
             <div class="row">
                 <div class="col-6">
                     <ul>
-                        <li v-for="todo, index in todoList" :key="index">{{ todo }}</li>
+                        <li v-for="todo, index in todoList" :key="index">{{ todo.name }}</li>
                     </ul>
                 </div>
                 <div class="col-6">

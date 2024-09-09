@@ -9,7 +9,10 @@
 
     if(isset($_POST['addTodo'])){
         $todo_item = $_POST['addTodo']; // Uso corretto di $_POST
-        array_push($todolist, $todo_item);
+
+        // Crea un array associativo per il nuovo todo
+        $newTodo = ["name" => $todo_item];
+        array_push($todolist, $newTodo);
 
         file_put_contents('./data/todo-list.json', json_encode($todolist));
     }
